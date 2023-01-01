@@ -13,7 +13,7 @@ from flask import Flask,render_template,request
 app=Flask(__name__)
 @app.route('/',methods=["GET","POST"])
 
-def net():
+def net(self):
     if request.method =="POST":
         img_path = request.form.get("file_u")
         return "Image Taken"
@@ -68,5 +68,5 @@ res=cv2.rectangle(img, tuple(approx[0][0]),tuple(approx[2][0]),(0,255,0),3)
 
 det=plt.imshow(cv2.cvtColor(res,cv2.COLOR_BGR2RGB))
 
-def img_show():
+def img_show(self,net):
     return det
