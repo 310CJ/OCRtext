@@ -16,8 +16,9 @@ app=Flask(__name__)
 def net(self):
     if request.method =="POST":
         img_path = request.form.get("file_u")
-        return "Image Taken"
+        return "Your Number Plate Is::"+img_show(det)
     return render_template("index.html")
+
 if(__name__=='__main__'):
     app.run()
 
