@@ -5,13 +5,13 @@ import numpy as np
 import imutils
 from matplotlib import pyplot as plt
 import cv2
-# import requests
-# url='http://localhost/readr/file1.php'
+import requests
+url='https://310cj.github.io/OCRtext/readr/templates/index.html'
 
 from flask import Flask,render_template,request
 
 app=Flask(__name__)
-@app.route('/',methods=["GET","POST"])
+@app.route('https://310cj.github.io/OCRtext/readr/templates/index.html',methods=["GET","POST"])
 
 def net(self):
     if request.method =="POST":
@@ -20,7 +20,7 @@ def net(self):
     return render_template("index.html")
 
 if(__name__=='__main__'):
-    app.run(host='0.0.0.0')
+    app.run()
 
     
 # img_path = './c.jpg'
